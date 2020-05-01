@@ -2,17 +2,6 @@ from convertDataFormat import *
 import unittest
 
 def converttest(img):
-    img_path = '/Users/spaceman/PycharmProjects/DataPreprocessing/'
-    global image_name
-    try:
-        for _ in img['labels']:
-            image_name = img['name'].replace('/', '_')
-    except:
-        pass
-    img = cv2.imread(img_path + image_name)
-    h, w = img.shape[:2]
-    length = getLength(img)
-    labels, points = convert_vertices_to_points(img)
     data = convert_scalabel_to_dataturks(img)
     dtturk = json.dumps(data, separators=(',', ':'))
     return dtturk
