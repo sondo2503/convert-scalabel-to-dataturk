@@ -92,7 +92,7 @@ def convert_scalabel_to_dataturks(img):
 
 
 def main():
-    # download_images_from_s3()
+    download_images_from_s3()
     # Create a new empty json file
     data = ''
     with open('/Users/spaceman/PycharmProjects/DataPreprocessing/data.json', 'w', encoding='utf-8') as file:
